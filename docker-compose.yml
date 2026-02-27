@@ -6,6 +6,22 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root # Senha do usuário 'root'
+      MYSQL_DATABASE: time_sheet   # Nome do banco que será criado
+    ports:
+      - "3306:3306" # Porta padrão do MySQL
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    container_name: clock_system_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root # Senha do usuário 'root'
       MYSQL_DATABASE: clock_in_project # Nome do banco que será criado
     ports:
       - "3306:3306" # Porta padrão do MySQL
