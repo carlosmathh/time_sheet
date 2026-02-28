@@ -19,3 +19,6 @@ def check_password(password_user, password_valid):
     password = password_user.encode("utf-8")
 
     return bcrypt.checkpw(password, password_valid)
+
+
+#

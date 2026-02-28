@@ -14,3 +14,4 @@
 # FROM time_logs
 # WHERE client_id = %s AND date BETWEEN %s AND %s
 # ORDER BY date, hour;
+#

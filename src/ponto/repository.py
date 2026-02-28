@@ -2,3 +2,4 @@
 REGISTER_CLOCK = """
     INSERT INTO time_logs(date, hour, action, id_client) VALUES (%s, %s, %s, %s)
 """
+#
